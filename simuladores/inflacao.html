@@ -8,7 +8,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script><link rel="stylesheet" href="../css/index.css">
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/index.css">
     <!--Google fonts-->
 
     <!--Work sans-->
@@ -16,18 +17,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="css/img/thumbnail.png" type="image/x-icon">
-    <title>CoinAcademy - Calculadora</title>
+    <link rel="shortcut icon" href="../css/img/thumbnail.png" type="image/x-icon">
+    <title>CoinAcademy - Simulador</title>
 </head>
 
 <body>
-    <script src="../css/calc.js"></script>
-    <script src="../css/calcComp.js"></script>
+    <script src="../css/inflacao.js"></script>
     <!---Navbarzera-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="../css/img/thumbnail.png" alt="" width="30vh" height="30vh" class="d-inline-block align-text-top">
+                <img src="../css/img/thumbnail.png" alt="" width="30vh" height="30vh"
+                    class="d-inline-block align-text-top">
 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -39,15 +40,16 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../index.html">Início</a>
                     </li>
-                    <li class="nav-item dropdown"style="color: var(--white);">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--white);">
-                         Informativo
+                    <li class="nav-item dropdown" style="color: var(--white);">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: var(--white);">
+                            Informativo
                         </a>
                         <ul class="dropdown-menu" style="color: var(--white);">
-                          <li><a class="dropdown-item" href="../investimentos.html">Investimentos</a></li>
-                          <li><a class="dropdown-item" href="../economia.html">Economia</a></li>
+                            <li><a class="dropdown-item" href="../investimentos.html">Investimentos</a></li>
+                            <li><a class="dropdown-item" href="../economia.html">Economia</a></li>
                         </ul>
-                      </li>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../simuladores.html">Simuladores e calculadoras</a>
                     </li>
@@ -61,82 +63,81 @@
     <br>
     <br>
 
-   
+
     <br><br>
-    
+
     <br><br>
     <div class="perguntas">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-body">
-                        <center><h4>Calculadora de juros compostos</h4></center><br>
-                        <label for="valor">Valor inicial</label><br>
-                        <input type="number" name="valor" id="valor" class=" capital2"><br>
+                        <center>
+                            <h4>Calculadora de Inflação</h4>
+                        </center><br>
+                        <label for="valor">Valor</label><br>
+                        <input type="number" name="valor" id="valor" class="capital2"><br>
 
-                        <label for="porcentagem">Porcentagem de juros</label><br>
-                        
-                        <input type="number" name="porcentagem" id="porcentagem" class="porcentagem2"><br>
+                        <label for="porcentagem">Porcentagem de inflação</label><br>
+                        <input type="number" name="porcentagem" id="inflacao" class="porcentagem2"><br>
 
                         <label for="tempo">Tempo</label><br>
-                        <input type="number" name="tempo" id="tempo" class=" tempo2"><br>
+                        <input type="number" name="tempo" id="tempo" class="tempo2"><br>
 
                         <div class="d-flex justify-content-center mb-3">
                             <div class="form-check form-switch me-3">
                                 <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios12"
-                                    value="1" checked >
+                                    value="1" checked>
                                 <label class="form-check-label" for="exampleRadios1">Mensal</label>
                             </div>
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios22"
                                     value="2">
                                 <label class="form-check-label" for="exampleRadios2">Anual</label>
+                                
                             </div>
-                        </div>
+                        </div><input type="submit" value="Calcular.." id="calcular2" class="btn btn-primary">
+                        <p id="resultado"></p>
+                    </div>
+                </div>
 
-                        <br><br>
-                        <input type="submit" value="Calcular.." id="calcular2" class="btn btn-primary">
+            </div><br>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5>Resultado:</h5>
+                            <p id="resultantes"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div><br>
 
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5>Resultado:</h5>
-                    <p id="resultantes"></p>
-                </div>
-            </div>
-        </div></div>
 
-   
-    
-        <br><br><br>
-        <br>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-item" style="font-family: 'Roboto', sans-serif; font-size: 1.4rem;">
-                    <p>Professor</p>
-                    <p class="subtext">Rodolfo</p>
+            <br><br><br>
+            <br>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-item" style="font-family: 'Roboto', sans-serif; font-size: 1.4rem;">
+                        <p>Professor</p>
+                        <p class="subtext">Rodolfo</p>
+                    </div>
+                    <div class="footer-item" style="font-family: 'Roboto', sans-serif; font-size: 1.4rem;">
+                        <p>Membros</p>
+                        <p class="subtext">Giovane, Kauã, Allyson e Gustavo</p>
+                    </div>
+                    <div class="footer-item" style="font-family: 'Roboto', sans-serif; font-size: 1.4rem;">
+                        <p>Sobre nós</p>
+                        <a href="sobrenos.html" style="text-decoration: none;color: rgb(192, 191, 191);"
+                            class="subtext">Sobre nós</a>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 p-3">
+                        <span style="font-family: 'Fredoka', sans-serif; font-size: 1.5rem;"><strong>#</strong></span>
+                    </div>
                 </div>
-                <div class="footer-item" style="font-family: 'Roboto', sans-serif; font-size: 1.4rem;">
-                    <p>Membros</p>
-                       <p class="subtext">Giovane, Kauã, Allyson e Gustavo</p>
-                </div>
-                <div class="footer-item" style="font-family: 'Roboto', sans-serif; font-size: 1.4rem;">
-                    <p>Sobre nós</p>
-                    <a href="sobrenos.html" style="text-decoration: none;color: rgb(192, 191, 191);"
-                        class="subtext">Sobre nós</a>
-                </div>
-                <div class="position-absolute bottom-0 end-0 p-3">
-                    <span style="font-family: 'Fredoka', sans-serif; font-size: 1.5rem;"><strong>#</strong></span>
-                </div>
-            </div>
-        </footer>
+            </footer>
 </body>
 
 </html>
