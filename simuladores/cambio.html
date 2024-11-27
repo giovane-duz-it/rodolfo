@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <script src="../css/inflacao.js"></script>
+    <script src="../css/cambio.js"></script>
     <!---Navbarzera-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -73,48 +73,48 @@
                 <div class="card text-center">
                     <div class="card-body">
                         <center>
-                            <h4>Calculadora de Inflação</h4>
+                            <h4>Calculadora de Conversão de Moedas</h4>
                         </center><br>
-                        <label for="valor">Valor</label><br>
-                        <input type="number" name="valor" id="valor" class="capital2"><br>
-
-                        <label for="porcentagem">Porcentagem de inflação</label><br>
-                        <input type="number" name="porcentagem" id="inflacao" class="porcentagem2"><br>
-
-                        <label for="tempo">Tempo</label><br>
-                        <input type="number" name="tempo" id="tempo" class="tempo2"><br>
-
-                        <div class="d-flex justify-content-center mb-3">
-                            <div class="form-check form-switch me-3">
-                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios12"
-                                    value="1" checked>
-                                <label class="form-check-label" for="exampleRadios1">Mensal</label>
-                            </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios22"
-                                    value="2">
-                                <label class="form-check-label" for="exampleRadios2">Anual</label>
-                                
-                            </div>
-                        </div><input type="submit" value="Calcular.." id="calcular2" class="btn btn-primary">
-                        <p id="resultado"></p>
+                        <label for="valor">Quantia</label><br>
+                        <input type="number" name="valor" id="valor" class="capital2" placeholder="Digite o valor" required><br>
+    
+                        <label for="from-currency">De:</label><br>
+                        <select id="from-currency" class="capital2">
+                            <option value="BRL">Real (BRL)</option>
+                            <option value="USD">Dólar (USD)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="JPY">Iene (JPY)</option>
+                        </select><br>
+    
+                        <label for="to-currency">Para:</label><br>
+                        <select id="to-currency" class="capital2">
+                            <option value="USD">Dólar (USD)</option>
+                            <option value="BRL">Real (BRL)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="JPY">Iene (JPY)</option>
+                        </select><br>
+    
+                        
+                        <input type="submit" value="Calcular.." id="calcular2" class="btn btn-primary">
                     </div>
                 </div>
-
             </div><br>
-
+    
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card-body">
                             <h5>Resultado:</h5>
+                            <p id="resultado"></p>
                             <p id="resultantes"></p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
+        </div>
+    </div>
+    
+    
 
             <br><br><br>
             <br>
